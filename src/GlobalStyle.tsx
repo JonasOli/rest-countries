@@ -2,10 +2,18 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
+    --darkModeElements: hsl(209, 23%, 22%);
+    --darkModeBackground: hsl(207, 26%, 17%);
+    --lightModeText: hsl(200, 15%, 8%);
+    --lightModeInput: hsl(0, 0%, 52%);
+    --lightModeBackground: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%) // Dark Mode Text & Light Mode Elements
   }
   
   html {
     font-size: 62.5%;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--lightModeBackground);
   }
 
   /*************  RESET  *************/
