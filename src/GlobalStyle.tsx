@@ -2,18 +2,23 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --darkModeElements: hsl(209, 23%, 22%);
-    --darkModeBackground: hsl(207, 26%, 17%);
-    --lightModeText: hsl(200, 15%, 8%);
-    --lightModeInput: hsl(0, 0%, 52%);
-    --lightModeBackground: hsl(0, 0%, 98%);
-    --white: hsl(0, 0%, 100%) // Dark Mode Text & Light Mode Elements
+    --fontColor: hsl(200, 15%, 8%);
+    --inputColor: hsl(0, 0%, 52%);
+    --backgroundColor: hsl(0, 0%, 98%);
+    --elementsColor: hsl(0, 0%, 100%)
+  }
+
+  [data-theme="dark"] {
+    --fontColor: hsl(0, 0%, 100%);
+    --backgroundColor: hsl(207, 26%, 17%);
+    --elementsColor: hsl(209, 23%, 22%);
   }
   
   html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px
     font-family: 'Nunito Sans', sans-serif;
-    background-color: var(--lightModeBackground);
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
   }
 
   /*************  RESET  *************/

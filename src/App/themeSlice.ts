@@ -15,7 +15,14 @@ export const themeSlice = createSlice({
   initialState,
   reducers: {
     changeTheme: (state) => {
-      state.dark = !state.dark;
+      const darkTheme = !state.dark;
+
+      state.dark = darkTheme;
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        darkTheme ? "dark" : "light"
+      );
     },
   },
 });
