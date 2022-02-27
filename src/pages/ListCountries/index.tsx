@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useQuery } from "react-query";
 import CountryCard from "../../components/CountryCard";
 import { listAllCountries } from "../../services/contriesService";
@@ -9,12 +10,12 @@ const ListCountries = () => {
     refetchOnWindowFocus: false,
   });
 
-  if (isLoading) return <div>loading</div>;
+  if (isLoading) return <AiOutlineLoading3Quarters />;
 
   return (
     <ListCoutriesContainer>
       {data?.map((country) => (
-        <CountryCard key={country.id} {...country} />
+        <CountryCard key={country.countryName} {...country} />
       ))}
     </ListCoutriesContainer>
   );

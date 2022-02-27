@@ -11,7 +11,6 @@ describe("<CountryCard />", () => {
         imgSrc="src"
         population={10000}
         region="test"
-        id={1}
       />
     );
 
