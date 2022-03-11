@@ -6,7 +6,7 @@ import { listAllCountries } from "../../services/contriesService";
 import { ListCoutriesContainer } from "./ListContries.styles";
 
 const ListCountries = () => {
-  const { isLoading, data } = useQuery("repoData", listAllCountries, {
+  const { isLoading, data } = useQuery("listAllCountries", listAllCountries, {
     refetchOnWindowFocus: false,
   });
 
@@ -15,7 +15,7 @@ const ListCountries = () => {
   return (
     <ListCoutriesContainer>
       {data?.map((country) => (
-        <CountryCard key={country.countryName} {...country} />
+        <CountryCard key={country.name} {...country} />
       ))}
     </ListCoutriesContainer>
   );

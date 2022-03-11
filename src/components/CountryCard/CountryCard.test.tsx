@@ -7,7 +7,7 @@ describe("<CountryCard />", () => {
     render(
       <CountryCard
         capital="test"
-        countryName="test"
+        name="test"
         imgSrc="src"
         population={10000}
         region="test"

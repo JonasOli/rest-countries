@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const CountryCardContainer = styled.div`
+const CountryCardContainer = styled(Link)`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease-in;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     transform: scale(1.1);

@@ -8,7 +8,7 @@ import {
 
 const CountryCard: React.FC<ICountry> = ({
   imgSrc,
-  countryName,
+  name,
   population,
   region,
   capital,
@@ -18,11 +18,11 @@ const CountryCard: React.FC<ICountry> = ({
   }
 
   return (
-    <CountryCardContainer>
-      <img src={imgSrc} alt={countryName + " flag"} />
+    <CountryCardContainer to={`/country/${name}`}>
+      <img src={imgSrc} alt={name + " flag"} />
 
       <CountryDetails>
-        <CountryName>{countryName}</CountryName>
+        <CountryName>{name}</CountryName>
 
         <div data-testid="population-number">
           <b>Population: </b>
