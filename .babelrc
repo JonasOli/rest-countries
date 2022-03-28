@@ -1,3 +1,17 @@
 {
-  "plugins": ["babel-plugin-styled-components"]
+  "plugins": [
+    "babel-plugin-styled-components",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "components": "components",
+          "pages": "pages",
+          "services": "services",
+          "utils": "utils"
+        }
+      }
+    ]
+  ]
 }

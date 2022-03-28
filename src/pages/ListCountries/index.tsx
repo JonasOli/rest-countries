@@ -1,8 +1,8 @@
 import React from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useQuery } from "react-query";
-import CountryCard from "../../components/CountryCard";
-import { listAllCountries } from "../../services/contriesService";
+import CountryCard from "components/CountryCard";
+import { listAllCountries } from "services/contriesService";
 import { ListCoutriesContainer } from "./ListContries.styles";
 
 const ListCountries = () => {
