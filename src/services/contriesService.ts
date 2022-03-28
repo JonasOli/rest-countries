@@ -6,12 +6,15 @@ interface ICountry {
   population: number;
   region: string;
   capital: string;
-  subRegion?: string;
-  nativeName?: string;
-  topLevelDomain?: string[];
-  curencies?: string[];
-  languages?: string[];
-  borders?: string[];
+}
+
+interface ICountryDetail extends ICountry {
+  subRegion: string;
+  nativeName: string;
+  topLevelDomain: string[];
+  curencies: string[];
+  languages: string[];
+  borders: string[];
 }
 
 async function listAllCountries(): Promise<ICountry[]> {
@@ -28,7 +31,7 @@ async function listAllCountries(): Promise<ICountry[]> {
   );
 }
 
-async function getCountryByName(countryName: string): Promise<ICountry> {
+async function getCountryByName(countryName: string): Promise<ICountryDetail> {
   const result = await api.get(`name/${countryName}`);
   const data = result.data[0];
 
@@ -48,4 +51,4 @@ async function getCountryByName(countryName: string): Promise<ICountry> {
 }
 
 export { listAllCountries, getCountryByName };
-export type { ICountry };
+export type { ICountry, ICountryDetail };

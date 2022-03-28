@@ -1,5 +1,6 @@
 import React from "react";
-import { ICountry } from "../../services/contriesService";
+import { ICountry } from "services/contriesService";
+import { numberWithCommas } from "utils/numberFormat";
 import {
   CountryCardContainer,
   CountryDetails,
@@ -13,10 +14,6 @@ const CountryCard: React.FC<ICountry> = ({
   region,
   capital,
 }: ICountry) => {
-  function numberWithCommas(number: number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
   return (
     <CountryCardContainer to={`/country/${name}`}>
       <img src={imgSrc} alt={name + " flag"} />

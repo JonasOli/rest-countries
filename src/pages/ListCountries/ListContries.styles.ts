@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ListCoutriesContainer = styled.div`
+const ListCoutriesContainer = styled.section`
   background-color: inherit;
   padding: 5rem;
   display: grid;
