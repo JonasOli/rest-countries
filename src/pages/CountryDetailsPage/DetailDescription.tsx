@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledDetailDescription } from "./CountryDetail.styles";
 
 interface IProps {
   detailName: string;
@@ -7,10 +8,10 @@ interface IProps {
 
 const DetailDescription = ({ detailDescription, detailName }: IProps) => {
   return (
-    <div>
+    <StyledDetailDescription>
       <b>{detailName}: </b>
       {detailDescription}
-    </div>
+    </StyledDetailDescription>
   );
 };
 

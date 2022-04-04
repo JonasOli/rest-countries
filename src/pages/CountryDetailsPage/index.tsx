@@ -9,6 +9,7 @@ import {
   ContryName,
   CountryDescription,
   CountryDetailContainer,
+  DetailDescriptionContainer,
 } from "./CountryDetail.styles";
 import DetailDescription from "./DetailDescription";
 
@@ -35,7 +36,7 @@ const CountryDetailsPage = () => {
           <CountryDescription>
             <ContryName>{data.name}</ContryName>
 
-            <div>
+            <DetailDescriptionContainer>
               <DetailDescription
                 detailName="Native Name"
                 detailDescription={data.nativeName}
@@ -72,7 +73,7 @@ const CountryDetailsPage = () => {
                 detailName="Borders"
                 detailDescription={data.borders?.join(" ")}
               />
-            </div>
+            </DetailDescriptionContainer>
           </CountryDescription>
         </CountryDetailContainer>
       </>
