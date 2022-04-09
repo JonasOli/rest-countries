@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ListCoutriesContainer = styled.section`
+const ListCoutries = styled.section`
   background-color: inherit;
   padding: 5rem;
   display: grid;
@@ -8,4 +8,4 @@ const ListCoutriesContainer = styled.section`
   gap: 5rem;
 `;
 
-export { ListCoutriesContainer };
+export { ListCoutries };
